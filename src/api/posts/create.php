@@ -1,7 +1,7 @@
 <?php
 
 /**
- * POST All Posts
+ * POST Post
  * url: /src/api/posts/create.php
  *
  * Example:
