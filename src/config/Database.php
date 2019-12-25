@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Database configuration options
  */
@@ -9,6 +8,8 @@ class Database
 
     /**
      * Db parameters
+     *
+     * note: should be done with .env variables
      */
     private $host = 'localhost';
     private $dbName = 'RestApiNF';
