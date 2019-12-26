@@ -5,6 +5,15 @@
  */
 class Database
 {
+    /**
+     * To constructor from .env
+     */
+    private $DB_HOST;
+    private $DB_PORT;
+    private $DB_NAME;
+    private $DB_USER;
+    private $DB_PASS;
+
 
     /**
      * Db parameters
@@ -40,7 +49,9 @@ class Database
                 PDO::ERRMODE_EXCEPTION
             );
         } catch (PDOException $e) {
-            echo 'Connection error: ' . $e->getMessage();
+            header("HTTP/1.1 500 Internal Server Error");
+            print_r(json_encode('Connection error: ' . $e->getMessage()));
+            exit();
         }
 
         return $this->connection;
