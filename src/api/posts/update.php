@@ -49,6 +49,6 @@ $post->categoryId = $data->category_id;
 if($post->update()) {
     echo json_encode(['message' => 'Post Updated']);
 } else {
-    echo json_encode(['message' => 'Post Updated']);
+    echo json_encode(['message' => 'Post Not Updated']);
 }
 
